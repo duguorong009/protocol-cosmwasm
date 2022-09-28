@@ -33,9 +33,8 @@ pub fn setup_environment(curve: Curve) -> (Vec<u8>, Vec<u8>) {
             let pk_bytes = include_bytes!(
                 "../../../substrate-fixtures/mixer/bn254/x5/proving_key_uncompressed.bin"
             );
-            let vk_bytes = include_bytes!(
-                "../../../substrate-fixtures/mixer/bn254/x5/verifying_key.bin"
-            );
+            let vk_bytes =
+                include_bytes!("../../../substrate-fixtures/mixer/bn254/x5/verifying_key.bin");
 
             (pk_bytes.to_vec(), vk_bytes.to_vec())
         }
